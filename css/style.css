@@ -58,7 +58,6 @@ img {
   padding: auto;
   height: auto;
   border-radius: 50%;
-  background-color: darkgrey;
 }
 h1 {
   display: flex;
@@ -75,7 +74,6 @@ h1 {
   background-color: rgb(131, 131, 131);
 }
 #occupation {
-  display: flex;
   font-size: 1.6rem;
   flex-direction: column;
   justify-content: space-around;
@@ -109,4 +107,48 @@ h1 {
   background-color: seagreen;
   grid-column: 2 / 3;
   grid-row: 5 / 6;
+}
+@media only screen and (max-width: 768px) {
+  body {
+      justify-content: center;
+      align-content: center;
+  }
+  main {
+    display: grid;
+  font-size: 2.4rem;
+  grid-template-columns: 30% 40% 30%;
+  grid-template-rows: 1fr 20% 10% 10% 1fr 1fr;
+  /* grid-template-areas: "main" "name" "content" "side"; */
+  justify-content: center;
+  align-content: center;
+  }
+  #status, img {
+    background-color: blue;
+    grid-row: 2/3;
+    grid-column: 1/4;
+    
+}
+img{
+  margin: auto
+  
+}
+  h1 {
+    grid-column: 1/4;
+    grid-row: 3/4;
+  }
+  #occupation {
+    grid-row: 4/5;
+    grid-column: 2/3 ;
+  }
+  #brand {
+    display: none;
+  }
+  #offer {
+    grid-row: 5/6;
+    grid-column: 2/3;
+  }
+  #contact {
+    grid-row: 6/7;
+    grid-column: 2/3;
+  }
 }
