@@ -111,19 +111,21 @@ h1 {
 @media only screen and (max-width: 768px) {
   body {
       justify-content: center;
-      align-content: center;
+      align-items: center;
   }
   main {
     display: grid;
   font-size: 2.4rem;
-  grid-template-columns: 30% 40% 30%;
-  grid-template-rows: 1fr 20% 10% 10% 1fr 1fr;
+  grid-template-columns:  300px 1fr;
+  grid-template-rows: 1fr 250px 50px 10% 10% 10% 1fr;
   /* grid-template-areas: "main" "name" "content" "side"; */
   justify-content: center;
   align-content: center;
   }
   #status, img {
-    background-color: blue;
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: darkgrey;
     grid-row: 2/3;
     grid-column: 1/4;
     
@@ -133,22 +135,35 @@ img{
   
 }
   h1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: darkgrey;
     grid-column: 1/4;
     grid-row: 3/4;
   }
   #occupation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     grid-row: 4/5;
-    grid-column: 2/3 ;
+    grid-column: 1/4;
+  
   }
   #brand {
     display: none;
   }
   #offer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     grid-row: 5/6;
-    grid-column: 2/3;
+    grid-column: 1/4;
+    background-color: darkgrey;
   }
   #contact {
     grid-row: 6/7;
-    grid-column: 2/3;
+    grid-column: 1/4;
   }
 }
